@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AnimationVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AnimationVC" id="BYZ-38-t0r" customClass="AnimationVC" customModule="Dovnar_Home_2022_01_20_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foto-vulcan" translatesAutoresizingMaskIntoConstraints="NO" id="sN9-Wt-GXS">
+                                <rect key="frame" x="20" y="361" width="374" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ewk-Dk-tze" appends="YES" id="qtj-x5-bdj"/>
+                                    <outletCollection property="gestureRecognizers" destination="7lY-5u-n7A" appends="YES" id="1hj-3c-FSa"/>
+                                    <outletCollection property="gestureRecognizers" destination="u0T-8R-0OI" appends="YES" id="aOV-Lt-nmK"/>
+                                    <outletCollection property="gestureRecognizers" destination="MQE-RG-psS" appends="YES" id="Ayf-BG-5hC"/>
+                                    <outletCollection property="gestureRecognizers" destination="Q09-Y5-GyE" appends="YES" id="5Ce-PL-juS"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="sN9-Wt-GXS" id="GtH-gI-VUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="ewk-Dk-tze">
+                    <connections>
+                        <action selector="didPanViewWithRecogniser:" destination="BYZ-38-t0r" id="QfQ-TC-h6R"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="7lY-5u-n7A">
+                    <connections>
+                        <action selector="didPinchViewWithRecogniser:" destination="BYZ-38-t0r" id="Dck-Wm-yKe"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="u0T-8R-0OI">
+                    <connections>
+                        <action selector="didRotationViewWithRecogniser:" destination="BYZ-38-t0r" id="9ol-if-aTi"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <tapGestureRecognizer id="MQE-RG-psS">
+                    <connections>
+                        <action selector="didTapViewWithRecogniser:" destination="BYZ-38-t0r" id="89v-8J-XaL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Q09-Y5-GyE">
+                    <connections>
+                        <action selector="didLongTapViewWithRecogniser:" destination="BYZ-38-t0r" id="f9l-IB-6tn"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
+        </scene>
+        <!--AlertsVC-->
+        <scene sceneID="WlR-rv-vL9">
+            <objects>
+                <viewController storyboardIdentifier="AlertsVC" id="fuh-ST-2pw" customClass="AlertsVC" customModule="Dovnar_Home_2022_01_20_Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DcM-VK-xkh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Image Tap to Select" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-Gn-lV5">
+                                <rect key="frame" x="155.5" y="423" width="103" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jZl-lg-Osh"/>
+                                    <constraint firstAttribute="width" constant="103" id="wJB-QB-a67"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B3m-NT-QHV">
+                                <rect key="frame" x="15" y="338.5" width="384" height="219"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B3m-NT-QHV" secondAttribute="height" multiplier="114:65" id="Fh5-pG-daK"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jGL-Rh-78R" appends="YES" id="BsE-gD-RHB"/>
+                                    <outletCollection property="gestureRecognizers" destination="w6S-0D-3XT" appends="YES" id="s23-nA-yfD"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6ps-kq-dgC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6ps-kq-dgC" firstAttribute="trailing" secondItem="B3m-NT-QHV" secondAttribute="trailing" constant="15" id="0WC-yX-UTA"/>
+                            <constraint firstItem="B3m-NT-QHV" firstAttribute="centerY" secondItem="DcM-VK-xkh" secondAttribute="centerY" id="3Hz-cS-eFA"/>
+                            <constraint firstItem="B3m-NT-QHV" firstAttribute="leading" secondItem="6ps-kq-dgC" secondAttribute="leading" constant="15" id="S7r-cq-QPT"/>
+                            <constraint firstItem="6Kd-Gn-lV5" firstAttribute="centerY" secondItem="DcM-VK-xkh" secondAttribute="centerY" id="a56-uS-lhQ"/>
+                            <constraint firstItem="B3m-NT-QHV" firstAttribute="centerX" secondItem="DcM-VK-xkh" secondAttribute="centerX" id="dzc-E6-fgK"/>
+                            <constraint firstItem="6Kd-Gn-lV5" firstAttribute="centerX" secondItem="DcM-VK-xkh" secondAttribute="centerX" id="omX-4m-6ZT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="B3m-NT-QHV" id="a8M-B5-JK5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUF-Md-WqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jGL-Rh-78R">
+                    <connections>
+                        <action selector="didTapView:" destination="fuh-ST-2pw" id="rzn-AB-pQ1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="w6S-0D-3XT">
+                    <connections>
+                        <action selector="didLongTapView:" destination="fuh-ST-2pw" id="Txq-98-VBl"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="foto-vulcan" width="666" height="425"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
